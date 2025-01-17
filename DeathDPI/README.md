@@ -87,6 +87,7 @@ DeathDPI/
 
 - [Setup Guide](SETUP.md)
 - [Command Line Arguments](Documentation.md)
+- [Contributing](github/CONTRIBUTING.md)
 
 ## 🤝 Contributing
 
