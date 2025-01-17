@@ -87,8 +87,6 @@ DeathDPI/
 
 - [Setup Guide](SETUP.md)
 - [Command Line Arguments](Documentation.md)
-- [Contributing Guidelines](.github/CONTRIBUTING.md)
-- [Code of Conduct](.github/CODE_OF_CONDUCT.md)
 
 ## 🤝 Contributing
 
