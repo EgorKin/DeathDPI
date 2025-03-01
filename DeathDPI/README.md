@@ -136,6 +136,8 @@ If you discover a security vulnerability, please send an email instead of using 
 
 ---
 
+For the Windows version visit [DeathDPI-Windows](https://github.com/Mikashades/DeathDPI-Windows) repository.
+
 <div align="center">
 Made by ❤️ Mikashades
 </div>
