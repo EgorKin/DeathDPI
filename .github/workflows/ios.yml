@@ -1,11 +1,6 @@
-name: Test all  platforms
+name: Swift
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  workflow_dispatch:
+on: [push]
 
 jobs:
   build:
