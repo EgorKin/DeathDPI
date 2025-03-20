@@ -8,18 +8,19 @@ on:
 
 jobs:
   build:
-    name: Swift ${{ matrix.swift }} on ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-        swift: ["5.2", "5.3"]
-    runs-on: ${{ matrix.os }}
+    name: Build and Test
+    runs-on: macos-latest
+
     steps:
-  - uses: actions/checkout@v4
-  - uses: swift-actions/setup-swift@65540b95f51493d65f5e59e97dcef9629ddf11bf
-    with:
-      swift-version: "5.3.3"
-  - name: Build
-    run: swift build
-  - name: Run tests
-    run: swift test
+    - uses: actions/checkout@v2
+    
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode.app
+      
+    - name: Build
+      run: |
+        xcodebuild clean build -project DeathDPI.xcodeproj -scheme DeathDPI -destination "platform=iOS Simulator,name=iPhone 13"
+        
+    - name: Run tests
+      run: |
+        xcodebuild test -project DeathDPI.xcodeproj -scheme DeathDPI -destination "platform=iOS Simulator,name=iPhone 13" 
